@@ -16,4 +16,9 @@ public class HumanName {
   private String suffix;
   private Period period; // Period of time in use
 
+  @Override
+  public String toString() {
+    return this.familyName + " " + this.givenName;
+  }
+
 }

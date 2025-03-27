@@ -1,4 +1,4 @@
-package com.project.healthcare.patient_api.models.resources;
+package com.project.healthcare.patient_api.models.requests;
 
 import java.sql.Blob;
 import java.util.Date;
@@ -7,14 +7,14 @@ import com.project.healthcare.patient_api.models.elements.*;
 import com.project.healthcare.patient_api.models.elements.backbone.*;
 import com.project.healthcare.patient_api.models.elements.codes.*;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@EqualsAndHashCode(callSuper = true)
-public class Patient extends Resource {
+@Getter
+@Setter
+public class PatientRequest {
 
-  private boolean active; // Whether the record is in active use
+  private boolean active;
   private HumanName name;
   private Date birthDate;
   private boolean deceased;
@@ -28,11 +28,5 @@ public class Patient extends Resource {
   private Contact contact;
   private ContactPoint telecom;
   private Communication communication;
-  // private Reference generalPractitioner;
-  // private Reference managingOrganization;
-
-  public Patient() {
-    super();
-  }
 
 }

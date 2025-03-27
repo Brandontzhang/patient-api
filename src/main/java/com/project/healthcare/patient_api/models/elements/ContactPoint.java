@@ -2,18 +2,27 @@ package com.project.healthcare.patient_api.models.elements;
 
 import com.project.healthcare.patient_api.models.elements.codes.*;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.NonNull;
 
-@Data
 // Contact detail for a person
+@Data
+@Builder
 public class ContactPoint {
+
+  @NonNull
   private ContactPointSystem method;
+
+  @NonNull
   private String value;
+
+  @NonNull
   private ContactPointUse use;
-  private int rank;
+
+  @Builder.Default
+  private int rank = 1;
+
+  @NonNull
   private Period period;
-
-  public ContactPoint() {
-
-  }
 }

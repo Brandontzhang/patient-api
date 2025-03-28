@@ -10,17 +10,16 @@ import lombok.NonNull;
 @Builder
 public class HumanName {
 
-  @NonNull
-  private NameUse use;
-
-  @NonNull
-  private String text; // Textual representative of full name
+  @Builder.Default
+  private NameUse use = NameUse.OFFICIAL;
 
   @NonNull
   private String familyName;
 
   @NonNull
   private String givenName;
+
+  private String text; // Textual representative of full name
 
   private String prefix;
 

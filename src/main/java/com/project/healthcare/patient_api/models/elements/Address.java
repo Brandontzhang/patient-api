@@ -13,6 +13,7 @@ public class Address {
 
   private String street2;
 
+  // TODO: Enum for states
   @NonNull
   private String state;
 

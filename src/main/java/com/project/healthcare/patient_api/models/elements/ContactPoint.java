@@ -23,6 +23,6 @@ public class ContactPoint {
   @Builder.Default
   private int rank = 1;
 
-  @NonNull
+  // TODO: Period on init
   private Period period;
 }

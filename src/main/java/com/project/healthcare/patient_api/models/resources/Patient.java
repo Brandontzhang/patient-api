@@ -34,6 +34,7 @@ public class Patient extends Resource {
 
   private Date deceasedDate;
 
+  @NonNull
   private Address address;
 
   @NonNull
